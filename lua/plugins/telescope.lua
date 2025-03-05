@@ -80,7 +80,7 @@ return {
       require('telescope').setup {
         defaults = vim.tbl_extend('error', standard_setup, {
           sorting_strategy = 'ascending',
-          path_display = { 'filename_first' },
+          path_display = { 'smart' },
           mappings = {
             n = {
               ['o'] = require('telescope.actions.layout').toggle_preview,
@@ -111,6 +111,7 @@ return {
           undo = vim.tbl_extend('error', fullscreen_setup, {
             diff_context_lines = 4,
             preview_title = 'Diff',
+            path_display = { 'truncate' },
             mappings = {
               i = {
                 ['<cr>'] = ts_undo.restore,
