@@ -118,6 +118,11 @@ return {
           'gopls',
           'intelephense',
           'psalm',
+          'eslint',
+          'ts_ls',
+          'jsonls',
+          'lua_ls',
+          'sqls',
         },
         handlers = {
           function(server_name)
