@@ -1,24 +1,28 @@
+local set = vim.keymap.set
+
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- Split remaps
+set('n', '<C-s>', '<C-w>s')
+set('n', '<C-v>', '<C-w>v')
+set('n', '<C-h>', '<C-w>h')
+set('n', '<C-j>', '<C-w>j')
+set('n', '<C-k>', '<C-w>k')
+set('n', '<C-l>', '<C-w>l')
+set('n', '<C-x>', ':close<CR>')
+set('n', '<C-o>', ':only<CR>')
 
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+set('n', '<C-w>', ':tabclose<CR>', { noremap = true, silent = true })
+set('n', '<C-t>', ':tabnew<CR>', { noremap = true, silent = true })
+set('n', '<C-1>', 'gt')
+set('n', '<C-2>', 'gT')
 
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+set('n', 'jk', 'Esc')
+set('n', 'jK', 'Esc')
 
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-
-vim.keymap.set('i', 'jk', '<esc>')
-
-vim.keymap.set('n', '<leader>n', ':Neotree<CR>')
+set('n', '<leader>st', function()
+  vim.cmp.vnew()
+  vim.cmp.term()
+  vim.cmp.wincmd 'J'
+  vim.api.nvim_win_set_height(0, 10)
+end)
