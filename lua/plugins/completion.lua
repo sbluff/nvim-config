@@ -3,10 +3,8 @@ return {
     'saghen/blink.cmp',
     dependencies = 'rafamadriz/friendly-snippets',
 
-    version = '*',
+    version = 'v0.*',
 
-    ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
     opts = {
       keymap = { preset = 'default' },
 
