@@ -26,10 +26,10 @@ return {
 
       local standard_setup = {
         borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-        preview = { hide_on_startup = true },
+        preview = { hide_on_startup = false },
         layout_strategy = 'vertical',
         layout_config = {
-          vertical = {
+          horizontal = {
             mirror = true,
             prompt_position = 'top',
             width = function(_, cols, _)

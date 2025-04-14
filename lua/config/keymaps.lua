@@ -11,6 +11,8 @@ set('n', '<C-h>', '<C-w>h')
 set('n', '<C-j>', '<C-w>j')
 set('n', '<C-k>', '<C-w>k')
 set('n', '<C-l>', '<C-w>l')
+set('n', '<C-v>', '<C-w>v')
+set('n', '<C-a>', '<C-w>a')
 set('n', '<C-x>', ':close<CR>')
 set('n', '<C-o>', ':only<CR>')
 
@@ -49,17 +51,3 @@ set('n', '<leader>st', function()
   })
   vim.cmd 'startinsert'
 end)
--- set(
---  'n',
--- '<leader>t',
--- open_floating_terminal(),
--- { desc = 'open floating terminal' }
-
--- )
-
--- set('n', '<leader>st', function()
---vim.cmd.vnew()
--- vim.cmd.term()
--- vim.cmd.wincmd 'J'
--- vim.api.nvim_win_set_height(0, 10)
--- end)
