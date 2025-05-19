@@ -21,8 +21,6 @@ return {
       'saghen/blink.cmp',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
-      -- Useful status updates for LSP.
-      -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim', opts = {} },
 
       -- Allows extra capabilities provided by nvim-cmp
@@ -110,7 +108,6 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua',
-        'php-cs-fixer',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
