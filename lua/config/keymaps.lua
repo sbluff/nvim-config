@@ -16,11 +16,11 @@ set('n', '<C-a>', '<C-w>a')
 set('n', '<C-a>', '<C-w>a')
 
 set('n', '<leader><leader>x', '<cmd>source %<CR>')
+set('n', '<leader>t', '<cmd>term<CR>')
 
 set('n', '<C-q>', ':bd<CR>')
 set('n', '<C-1>', ':bnext<CR>')
 set('n', '<C-2>', ':bprev<CR>')
-set('n', '<C-o>', ':only<CR>')
 set('n', '<C-n>', ':tabnew<CR>', { noremap = true, silent = true })
 
 set('i', 'jk', '<Esc>')
