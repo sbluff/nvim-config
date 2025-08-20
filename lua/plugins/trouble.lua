@@ -1,6 +1,9 @@
 return {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  config = {
+    use_diagnostic_signs = true,
+  },  
+  opts = {},
   cmd = "Trouble",
   keys = {
     {
