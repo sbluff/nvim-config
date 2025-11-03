@@ -13,6 +13,10 @@ local function map_modes(modes, source_remap, target_remap, opts)
     end
 end
 
+local function hover()
+    vim.lsp.buf.hover { border = "rounded", max_height = 50, max_width = 120 }
+end
+
 -- Split remaps
 set('n', '<C-s>', function()
     vim.cmd.vnew()
@@ -43,3 +47,4 @@ set('i', 'kj', '<Esc>')
 set('i', 'kJ', '<Esc>')
 set('t', 'jk', [[<C-\><C-n>]], { noremap = true, silent = true })
 set('t', 'kj', [[<C-\><C-n>]], { noremap = true, silent = true })
+set("n", "K", hover)
