@@ -17,10 +17,7 @@ vim.opt.undofile = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
-vim.schedule(function()
-    vim.opt.clipboard = 'unnamedplus'
-end)
+vim.opt.clipboard = 'unnamedplus'
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
@@ -40,7 +37,9 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+vim.opt.clipboard='unnamed'
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -50,6 +49,8 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+vim.opt.wrap = false
 
 vim.api.nvim_create_autocmd('TextYankPost', {
     desc = 'Highlight when yanking (copying) text',

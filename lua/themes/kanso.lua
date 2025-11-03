@@ -1,4 +1,3 @@
-
 return {
   {
     'webhooked/kanso.nvim',
@@ -33,6 +32,7 @@ return {
         })
 
         -- setup must be called before loading
-        vim.cmd("colorscheme kanso")    end,
+        -- vim.cmd("colorscheme kanso")
+    end,
   },
 }
